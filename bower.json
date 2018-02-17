@@ -1,0 +1,26 @@
+
+{
+  "name": "we-theme-compact",
+  "description": "Tema compacto com destaque no logo e título do site",
+  "main": "theme.js",
+  "authors": [
+    "Alberto Souza <contato@albertosouza.net>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "we.js"
+  ],
+  "homepage": "https://linkysystems.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "matchHeight": "jquery-match-height#^0.7.2",
+    "bootstrap": "^3.3.7"
+  }
+}

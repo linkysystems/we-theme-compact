@@ -1,0 +1,65 @@
+{{#if widget.news.length}}
+  {{#ifCond widget.layout "home"}}
+    {{#each widget.news}}
+      {{#isPair @key}}
+        <div class="home-news-item">
+          <div class="row even-row">
+            <div class="col-md-3">
+              <div class="news-block-side">
+                {{#each featuredImage}}
+                  <a href="/news/{{../id}}"><img class="img-responsive" src="{{urls.large}}"></a>
+                {{/each}}
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="news-block-main">
+                <h4><a href="/news/{{id}}">{{title}}</a></h4>
+                <p>
+                  {{{about}}}
+                  <br><a href="/news/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{else}}
+        <div class="home-news-item">
+          <div class="row odd-row">
+            <div class="col-md-9">
+              <div class="news-block-main">
+                <h4><a href="/news/{{id}}">{{title}}</a></h4>
+                <p>
+                  {{{about}}}
+                  <br><a href="/news/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="news-block-side">
+                {{#each featuredImage}}
+                  <a href="/news/{{../id}}"><img class="img-responsive" src="{{urls.large}}"></a>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/isPair}}
+    {{/each}}
+  {{else}}
+    {{#each widget.news}}
+      <div class="widget-news-item">
+        {{#each featuredImage}}
+          <a href="/news/{{../id}}" class="widget-news-featuredImage-link thumbnail"><img class="widget-news-featuredImage" src="{{urls.thumbnail}}"></a>
+        {{/each}}
+        <div class="widget-news-body">
+          <h4 class="news-title">
+            <a href="/news/{{id}}">{{title}}</a></h4>
+          <p>
+            {{{about}}}
+            <br><a href="/news/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+          </p>
+        </div>
+      </div>
+    {{/each}}
+  {{/ifCond}}
+{{/if}}

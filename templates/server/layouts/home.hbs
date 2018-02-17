@@ -1,0 +1,19 @@
+<div class="main-area">
+  <div id="sysMessagesArea" class="container">{{{we-messages}}}</div>
+  <div class="row">
+    <div class="col-md-12">
+      {{#region 'highlighted'}}{{/region}}
+    </div>
+
+    <div class="col-md-3">
+      {{#region 'sidebar'}}{{/region}}
+    </div>
+    <div class="col-md-9">
+      <div id="content" role="main">
+        {{{body}}}
+        {{#region 'content'}}{{/region}}
+      </div>
+      {{#region 'afterContent'}}{{/region}}
+    </div>
+  </div>
+</div>

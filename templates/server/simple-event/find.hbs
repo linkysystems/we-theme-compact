@@ -1,0 +1,27 @@
+{{{breadcrumb}}}
+
+<div class="event-list">
+  <h1>{{t 'simple-event.find'}}</h1>
+
+  <div class="row">
+    {{#if data.length}}
+      <div class="col-md-12">
+        {{#each data}}
+          {{render-record-teaser modelName='simple-event' record=this locals=..}}
+        {{/each}}
+      </div>
+    {{else}}
+      <div class="col-md-12">
+        <p class="contents-empty">Nenhum evento foi encontrado para essa lista.</p>
+      </div>
+    {{/if}}
+
+    <div class="col-md-12">
+      {{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}
+    </div>
+
+    <div class="col-md-12">
+      {{#region 'content'}}{{/region}}
+    </div>
+  </div>
+</div>
