@@ -20,22 +20,10 @@ module.exports = {
         label: 'Cor padrão do tema',
         stylesheet: 'files/public/style-default.css',
         colors: [
-          { value: '#600405' },
-          { value: '#6E2D28' },
           { value: '#000' },
           { value: '#fff' },
-          { value: '#222222' },
-          { value: '#cc964e' }
-        ]
-      },
-      gray: {
-        label: 'Cores: preto, branco e cinza',
-        stylesheet: 'files/public/style-gray.css',
-        colors: [
-          { value: '#ccc' },
-          { value: '#dfdfdf' },
-          { value: '#aaa' },
-          { value: '#000' }
+          { value: '#ddd' },
+          { value: '#222' }
         ]
       },
       darkgreen: {

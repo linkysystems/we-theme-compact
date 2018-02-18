@@ -1,10 +1,8 @@
 {{#if widget.events.length}}
   {{#ifCond widget.layout "home"}}
-    <div class="container">
-      {{#each widget.events}}
-        {{render-record-teaser modelName='simple-event' record=this locals=../locals}}
-      {{/each}}
-    </div>
+    {{#each widget.events}}
+      {{render-record-teaser modelName='simple-event' record=this locals=../locals}}
+    {{/each}}
   {{else}}
     {{#each widget.events}}
       <div class="widget-news-item">
