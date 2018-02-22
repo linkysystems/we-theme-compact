@@ -27,10 +27,6 @@
   }
 }
 
-.header-topbar {
-  // height: 100vh;
-}
-
 .header-topbar-menu {
   // position: absolute;
   // width: 100%;
@@ -46,11 +42,6 @@
   .navbar {
     margin-bottom: 0px;
     border: 0px;
-  }
-
-  .navbar-collapse {
-    padding-right: 0px;
-    padding-left: 5px;
   }
 
   .navbar-nav>li>a {
@@ -104,7 +95,6 @@
   font-size: 30px;
   font-weight: bold;
 }
-
 .site-logo {
   width: 140px;
   min-height: 130px;
@@ -112,11 +102,9 @@
   padding: 10px;
   background-color: #fff;
 }
-
 .site-logo img {
   max-width: 100%;
 }
-
 .logo-arrow-down {
   margin: 0px auto;
   width: 0;
@@ -126,14 +114,35 @@
   border-top: 37px solid #fff
 }
 
-.main-area {
-  border-top: 1px solid @border-color;
+.header-topbar.header-topbar-not-home {
+  .header-middle {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    // text-align: left;
+  }
+
+  .logo-subtitle-area {
+    margin-bottom: 20px;
+  }
+
+  .site-name-area {
+    text-align: left;
+    padding-left: 0px;
+  }
+}
+
+.highlighted-area > .col-md-12 {
+  min-height: 0px;
 }
 
 .main-area,
 .footer,
 footer {
   background-color: #fff;
+}
+
+#region-highlighted {
+  background-color: #000;
 }
 
 .footer-social-links {
@@ -151,9 +160,9 @@ footer {
   }
 }
 
-.news-block-main {
-  padding: 25px;
-}
+// .news-block-main {
+//   padding: 25px;
+// }
 
 .home-news-item {
   // border-bottom: 1px solid @border-color;
@@ -166,29 +175,11 @@ footer {
 .news-block-side {
   border-top: 1px solid @border-color;
   border-bottom: 1px solid @border-color;
-}
+  background-color: @secundary-bg;
+  color: @secundary-color;
 
-.even-row {
-  .news-block-side {
-    margin-right: -15px;
-    border-right: 1px solid @border-color;
-    background-color: @secundary-bg;
-    color: @secundary-color;
-  }
-  .news-block-main {
-    padding-left: 10px;
-  }
-}
-
-.odd-row {
-  .news-block-side {
-    margin-left: -15px;
-    border-left: 1px solid @border-color;
-    background-color: @secundary-bg;
-    color: @secundary-color;
-  }
-  .news-block-main {
-    padding-right: 10px;
+  img {
+    width: 100%;
   }
 }
 
@@ -244,3 +235,151 @@ body.body-main-index {
     }
   }
 }
+
+
+
+.widget-simple-event,
+.widget-news {
+  .panel {
+    background-color: @header-topbar-bg;
+    color: @header-topbar-color;
+    border: 1px solid @a-color;
+    box-shadow: 0 1px 1px @a-color;
+
+    .panel-body {
+      border-top: 4px double @a-color;
+    }
+  }
+
+  .widget-news-item {
+    border-bottom: 1px dashed @border-color;
+    margin-bottom: 10px;
+    min-height: 100px;
+
+    &:last-child  {
+      border-bottom: none;
+    }
+
+    .widget-news-featuredImage-link {
+      float: left;
+      margin-right: 5px;
+      margin-bottom: 2px;
+    }
+
+    .news-title {
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .widget-news-body {
+      p {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+    }
+
+  }
+}
+
+.widget-simple-event {
+  .hotel-event-dates {
+    font-size: 12px;
+  }
+}
+
+#region-sidebar {
+  .widget {
+    .panel();
+    border-color: @border-color;
+
+    .widget-header {
+      .panel-heading();
+
+      color: @panel-default-text;
+      background-color: @panel-default-heading-bg;
+      border-color: @panel-default-border;
+
+      h3 {
+        font-family: inherit;
+        margin: 0px;
+        font-size: 14px;
+      }
+    }
+
+    .news-title {
+      margin-top: 0px;
+    }
+
+    .widget-content {
+      .panel-body();
+
+    }
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  .widget-content {
+    .col-md-9 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .news-block-main {
+      padding: 0px;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .header-topbar-menu .navbar-collapse {
+    padding-right: 0;
+    padding-left: 5px;
+  }
+
+  .news-block-side {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .even-row {
+    .news-block-side {
+      margin-right: -15px;
+      border-right: 1px solid @border-color;
+    }
+    .news-block-main {
+      padding-right: 15px;
+    }
+  }
+
+  .odd-row {
+    .news-block-side {
+      margin-left: -15px;
+      border-left: 1px solid @border-color;
+    }
+    .news-block-main {
+      padding-left: 15px;
+    }
+  }
+
+  .simple-event-teaser {
+    >.col-md-3 {
+      padding-right: 0px;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
+

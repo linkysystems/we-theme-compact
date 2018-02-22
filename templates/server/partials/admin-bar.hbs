@@ -1,6 +1,6 @@
-{{#if req.user.id}}
-  <div id="weAdminBar">
-    <div class="container">
+<div id="weAdminBar">
+  <div class="container">
+    {{#if req.user.id}}
       {{#if menuAuthenticated}}
         <ul class="nav navbar-right">
           <li>
@@ -17,8 +17,22 @@
             {{we-menu menuAuthenticated class="dropdown-menu"}}
           </li>
         </ul>
-      {{else}}{{we-menu userMenu class="nav navbar-right"}}{{/if}}
-    </div>
+      {{else}}{{we-menu userMenu class="nav navbar-right"}}
+      {{/if}}
+    {{else}}
+      <ul class="nav navbar-right">
+        <li>
+          <a href="/login" class="">
+            <span class="glyphicon glyphicon-log-in"></span> Entrar
+          </a>
+        </li>
+        <li>
+          <a href="/signup" class="">
+            <span class="glyphicon glyphicon-plus"></span> Registrar
+          </a>
+        </li>
+      </ul>
+    {{/if}}
   </div>
-  <div id="afterWeadmin"></div>
-{{/if}}
+</div>
+<div id="afterWeadmin"></div>

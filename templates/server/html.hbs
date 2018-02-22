@@ -32,9 +32,7 @@
   <div class="wrapper" style="background-image: url('{{#if req.we.systemSettings.bgImageUrlOriginal}}{{req.we.systemSettings.bgImageUrlOriginal}}{{else}}/public/theme/we-theme-compact/images/default-bg.jpg{{/if}}');">
     <div class="container">
       {{{template 'partials/fb-lib'}}}
-
       {{we-event event="we-html-body-start"}}
-      {{{template 'partials/header'}}}
       {{{layoutHtml}}}
       {{{template 'partials/footer'}}}
       {{we-event event="we-html-body-end"}}

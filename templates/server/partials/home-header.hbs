@@ -1,8 +1,8 @@
 {{{template 'partials/admin-bar'}}}
 
-<div class="header-topbar header-topbar-not-home">
+<div class="header-topbar header-topbar-home">
   <div class="row logo-subtitle-area">
-    <div class="col-md-3 col-sm-3 {{#if req.we.systemSettings.logoUrlOriginal}}with-logo-img{{/if}}">
+    <div class="col-md-12 {{#if req.we.systemSettings.logoUrlOriginal}}with-logo-img{{/if}}">
       <div class="logo-area">
         <a class="site-logo" href="/">
           {{#if req.we.systemSettings.logoUrlOriginal}}
@@ -14,7 +14,7 @@
       </div>
 
     </div>
-    <div class="col-md-9 col-sm-9">
+    <div class="col-md-12">
       <div class="header-middle">
         <div class="site-name-area">
           <span class="site-name">{{#if req.we.systemSettings.subTitle}}{{{req.we.systemSettings.subTitle}}}{{else}}
