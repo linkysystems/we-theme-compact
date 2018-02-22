@@ -1,0 +1,30 @@
+<ol class="breadcrumb">
+  <li><a href="/">Início</a></li>
+  <li class="active">Municípios Conveniados</li>
+</ol>
+
+<div class="record-list">
+<h1 class="hotel-rooms-title">Municípios Conveniados</h1>
+
+<div class="row hotel-rooms">
+  {{#each data}}
+    <div class="col-sm-12 col-md-4 col-lg-4 match-grid-col-scroll">
+      <div class="hotel-room-record-teaser">
+        {{render-record-teaser modelName='municipio' record=this locals=..}}
+      </div>
+    </div>
+  {{else}}
+    <div class="col-md-12">
+      <p class="contents-empty">Nenhum município foi encontrado para essa lista.</p>
+    </div>
+  {{/each}}
+
+  <div class="col-md-12">
+    {{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}
+  </div>
+
+  <div class="col-md-12">
+    {{#region 'content'}}{{/region}}
+  </div>
+</div>
+</div>
