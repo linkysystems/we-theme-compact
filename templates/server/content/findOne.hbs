@@ -1,6 +1,6 @@
 <div class="record-item">
   <div class="row content-view-record">
-    <div class="col-md-8 col-lg-8">
+    <div class="col-md-8 col-lg-8 main-content-area">
       <h1>{{data.title}}
         {{#can permission='update_content' roleNames=req.userRoleNames}}
           <a href="/admin/#/contents/{{data.id}}" class="btn btn-default">Editar</a>
@@ -33,9 +33,7 @@
 
       {{#region 'content'}}{{/region}}
     </div>
-
-    <!-- Blog Sidebar Widgets Column -->
-    <div class="col-md-4 col-lg-4">
+    <div class="col-md-4 col-lg-4 side-content-area">
       <div class="sidebar-module">
         <div class="panel panel-default">
           <div class="panel-heading">Buscar conteúdo</div>
@@ -49,7 +47,6 @@
                 </button>
                 </span>
               </div>
-              <!-- /.input-group -->
             </form>
           </div>
         </div>
