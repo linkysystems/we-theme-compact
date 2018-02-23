@@ -7502,6 +7502,9 @@ body.body-main-index .widget-header h3 {
   vertical-align: middle;
   padding: 0px 18px;
 }
+.carousel-inner .c-block-sidebar .slide-description .slide-link {
+  white-space: normal;
+}
 .carousel-inner .c-block-main {
   background-repeat: no-repeat;
   background-size: cover;
