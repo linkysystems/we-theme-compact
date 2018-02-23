@@ -7136,7 +7136,7 @@ body.body-main-index .widget-header h3 {
 #region-sidebar .widget .widget-content {
   padding: 15px;
 }
-#region-sidebar .widget-fb-page .widget.widget-content {
+#region-sidebar .widget-fb-page .widget-content {
   padding: 0px;
 }
 @media (max-width: 767px) {
