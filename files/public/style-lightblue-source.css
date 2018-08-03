@@ -7147,6 +7147,10 @@ body.body-main-index .widget-header h3 {
   padding-right: 0px;
   padding-left: 0px;
 }
+.h4,
+h4 {
+  font-size: 20px;
+}
 .news-list,
 .news-item {
   padding: 15px;
@@ -7175,9 +7179,18 @@ body.body-main-index .widget-news h4 {
   width: 100%;
 }
 .home-news-item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed #ccc;
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+.home-news-item a {
+  color: #000;
+}
+.news-block-main {
+  font-size: 1.2em;
+}
+.featured-image-findOne {
+  margin-bottom: 8px;
 }
 .event-list,
 .event-item {
