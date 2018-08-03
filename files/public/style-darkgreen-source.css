@@ -6746,9 +6746,6 @@ h1 {
 .default-layout #content {
   padding-right: 15px;
 }
-.header-topbar-menu .col-main {
-  padding-left: 0px;
-}
 .header-topbar-menu .navbar {
   margin-bottom: 0px;
   border: 0px;
@@ -6847,15 +6844,6 @@ footer {
 }
 .home-news-item a {
   color: #888;
-}
-.news-block-side {
-  border-top: 1px solid #006B40;
-  border-bottom: 1px solid #006B40;
-  background-color: #006B40;
-  color: #fff;
-}
-.news-block-side img {
-  width: 100%;
 }
 .btn-contact {
   border-radius: 0px;
@@ -7153,33 +7141,15 @@ body.body-main-index .widget-header h3 {
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .header-topbar-menu .navbar-collapse {
-    padding-right: 0;
-    padding-left: 5px;
-  }
-  .news-block-side {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-  .even-row .news-block-side {
-    margin-right: -15px;
-    border-right: 1px solid #006B40;
-  }
-  .even-row .news-block-main {
-    padding-right: 15px;
-  }
-  .odd-row .news-block-side {
-    margin-left: -15px;
-    border-left: 1px solid #006B40;
-  }
-  .odd-row .news-block-main {
-    padding-left: 15px;
-  }
   .simple-event-teaser > .col-md-3 {
     padding-right: 0px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
+.navbar-collapse {
+  padding-right: 0px;
+  padding-left: 0px;
+}
 .news-list,
 .news-item {
   padding: 15px;
@@ -7191,6 +7161,21 @@ body.body-main-index .widget-header h3 {
 .news-list .featuredImage,
 .news-item .featuredImage {
   margin-bottom: 8px;
+}
+body.body-main-index .widget-news {
+  margin: 20px 15px;
+}
+body.body-main-index .widget-news h4 {
+  margin-top: 0px;
+  color: #000;
+}
+.news-block-side {
+  border: 1px solid #006B40;
+  background-color: #006B40;
+  color: #fff;
+}
+.news-block-side img {
+  width: 100%;
 }
 .event-list,
 .event-item {
@@ -7508,4 +7493,18 @@ body.body-main-index .widget-header h3 {
 .carousel-inner .c-block-main {
   background-repeat: no-repeat;
   background-size: cover;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .carousel-inner .c-block-main,
+  .carousel-inner .c-block-sidebar {
+    min-height: 550px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .carousel-inner .c-block-main,
+  .carousel-inner .c-block-sidebar {
+    min-height: 590px;
+  }
 }
