@@ -1,7 +1,7 @@
 {
   "name": "we-theme-compact",
   "private": true,
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "theme.js",
   "scripts": {
     "start": "gulp"
